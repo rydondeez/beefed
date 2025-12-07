@@ -12,19 +12,39 @@
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
     nav a:hover { color: #ff4141; }
 
-    .hero { padding: 100px 0; text-align: center; background: #ff4141; color: white; }
+    .hero { width: 100%;
+        padding: 300px 0;
+        text-align: center;
+        background-image: url(images/tenor.gif);
+        color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;}
+
     .hero h1 { font-size: 3rem; font-weight: 900; }
-    .hero p { margin-top: 10px; font-size: 1.2rem; }
+    .hero p { margin-top: 10px; font-size: 1.2rem; color: #f5f5f5; }
 
     .section { padding: 60px 0; }
     h2 { font-size: 2.5rem; font-weight: 800; text-align: center; }
+    p {text-align: center; margin-top: 20px; font-size: 1.1rem; color: #555; }
     .about-text { margin-top: 20px; max-width: 800px; text-align: center; margin-left: auto; margin-right: auto; line-height: 1.6; }
 
+    /* Produits */
+    .products { padding: 60px 0; }
+    .products h2 { font-size: 2.5rem; font-weight: 800; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+    .card { background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .card-img { width: 100%; background: #eee; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #777; }
+    .card h3 { margin-top: 15px; font-size: 1.3rem; }
+    .card p { color: #666; margin-top: 5px; }
     .contact { background: white; max-width: 700px; margin: 60px auto; padding: 40px; border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .contact form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
     input, textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
     button { background: #111; color: white; border: none; padding: 12px; font-size: 1rem; border-radius: 8px; cursor: pointer; }
     button:hover { background: #000; }
+    .contacts { background: white; max-width: 75%;height:400px ; margin: 60px auto; padding: 40px; border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    
 
     footer { text-align: center; padding: 20px; background: #111; color: white; margin-top: 40px; }
   </style>
@@ -53,7 +73,70 @@
       Nous mettons en avant l'innovation, la qualité et la satisfaction de nos clients.
       Notre mission est d'offrir des produits et services premium qui renforcent la confiance et l'efficacité.
     </p>
+
+    <!-- PRODUITS -->
+  <section class="container products" id="products">
+    <h2>Nos Saveurs</h2>
+    <div class="product-grid">
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/WhatsApp Image 2025-12-07 at 20.41.37 (1).jpeg" alt="img"></div>
+        <h3></h3>
+        <p></p>
+      </div>
+      
+     
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/WhatsApp Image 2025-12-07 at 20.41.37.jpeg" alt="kc"></div>
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="card">
+        <div class="card-img"><img class="card-img" src="images/WhatsApp Image 2025-12-07 at 20.41.41.jpeg" alt="kc"></div>
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
   </section>
+
+    
+  </section>
+
+  <h2> Nos clients </h2>
+  <section class="container products" id="products">
+    
+    <div class="product-grid">
+      <div class="card">
+        <h3>Sara El Mandari</h3>
+        <p>“Service rapide et portions généreuses ! J’ai commandé un menu complet pour ma famille, tout est arrivé chaud et bien emballé. Je recommande fortement.”</p>
+      </div>
+      
+     
+      <div class="card">
+        <h3>Anas Berrada</h3>
+        <p>“Franchement top ! Le suivi de commande est clair et les prix sont corrects. Le livreur était super poli.”</p>
+      </div>
+      <div class="card">
+        <h3>Ikram Aït Lhaj</h3>
+        <p>“Expérience parfaite. Le repas était délicieux et livré en moins de 25 minutes. Je repasserai commande sans hésiter.”</p>
+      </div>
+    </div>
+  </section>
+
+<h2> Notre service</h2>
+<p>nous offerons un service de commande de serveurs n'importe où au maroc</p>
+  <section class="contact" id="contact">
+     <h2>Commendez un serveur</h2>
+     <div></div>
+     <form onsubmit="event.preventDefault(); sendMessage();">
+      <input type="text" id="name" placeholder="Nom complet" required>
+      <button type="submit"> Commender un serveur</button>
+    </form>
+  
+  
+  </section>
+ 
+   <h2> Notre Contact </h2>
+
 
   <!-- Contact -->
   <section class="contact" id="contact">
@@ -80,3 +163,5 @@
   </script>
 </body>
 </html>
+
+
