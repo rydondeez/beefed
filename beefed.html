@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beefed - Présentation de l'entreprise</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f5f5f5; color: #222; }
+    header { background: #111; padding: 20px; color: white; position: sticky; top: 0; z-index: 100; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { color: #ff4141; }
+
+    .hero { padding: 100px 0; text-align: center; background: #ff4141; color: white; }
+    .hero h1 { font-size: 3rem; font-weight: 900; }
+    .hero p { margin-top: 10px; font-size: 1.2rem; }
+
+    .section { padding: 60px 0; }
+    h2 { font-size: 2.5rem; font-weight: 800; text-align: center; }
+    .about-text { margin-top: 20px; max-width: 800px; text-align: center; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+    .contact { background: white; max-width: 700px; margin: 60px auto; padding: 40px; border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .contact form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+    input, textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
+    button { background: #111; color: white; border: none; padding: 12px; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    button:hover { background: #000; }
+
+    footer { text-align: center; padding: 20px; background: #111; color: white; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content: space-between;">
+      <h1>Beefed</h1>
+      <nav>
+        <a href="#about">L'entreprise</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenue chez Beefed</h1>
+    <p>La puissance, la qualité et l'innovation.</p>
+  </section>
+
+  <!-- Présentation -->
+  <section class="section" id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p class="about-text">
+      Beefed est une entreprise moderne spécialisée dans la performance, l'énergie et l'excellence.
+      Nous mettons en avant l'innovation, la qualité et la satisfaction de nos clients.
+      Notre mission est d'offrir des produits et services premium qui renforcent la confiance et l'efficacité.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contactez-nous</h2>
+    <form onsubmit="event.preventDefault(); sendMessage();">
+      <input type="text" id="name" placeholder="Nom complet" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Beefed - Tous droits réservés
+  </footer>
+
+  <script>
+    function sendMessage() {
+      alert("Message envoyé ! (Interface seulement)");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
+  </script>
+</body>
+</html>
